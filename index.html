@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Assignment-3b</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Background Video -->
+  <video autoplay muted loop id="background-video">
+    <source src="background-video.mp4" type="video/mp4">
+  </video>
+
+  <div class="container">
+    <h1>Order Your Smoothie Here</h1>
+    <form id="smoothie-form">
+      <!-- Smoothie Name -->
+      <label for="smoothie-name">Name Your Smoothie:</label>
+      <input type="text" id="smoothie-name" name="smoothieName" placeholder="E.g., Tropical Delight" required>
+      
+      <!-- Base Options for your Smoothie -->
+      <label for="base">Choose a Base for your smoothie ($2.50):</label>
+      <select id="base" name="base" required>
+        <option value="" disabled selected>Select a base</option>
+        <option value="Milk">Milk</option>
+        <option value="Almond Milk">Almond Milk</option>
+        <option value="Coconut Water">Coconut Water</option>
+        <option value="Yogurt">Yogurt</option>
+      </select>
+
+      <!-- Ingredients for your Smoothie -->
+      <fieldset>
+        <legend>Pick Your Ingredients ($1 each):</legend>
+        <div class="ingredients-list">
+          <label><input type="checkbox" name="ingredients" value="Banana"> Banana</label>
+          <label><input type="checkbox" name="ingredients" value="Strawberry"> Strawberry</label>
+          <label><input type="checkbox" name="ingredients" value="Blueberry"> Blueberry</label>
+          <label><input type="checkbox" name="ingredients" value="Mango"> Mango</label>
+          <label><input type="checkbox" name="ingredients" value="Spinach"> Spinach</label>
+          <label><input type="checkbox" name="ingredients" value="Honey"> Honey</label>
+          <label><input type="checkbox" name="ingredients" value="Oats"> Oats</label>
+          <label><input type="checkbox" name="ingredients" value="Cocoa"> Cocoa</label>
+        </div>
+      </fieldset>
+      
+      <!-- Size -->
+      <label for="size">Select Size:</label>
+      <select id="size" name="size" required>
+        <option value="" disabled selected>Select size</option>
+        <option value="Small" data-price="4">Small ($4.00)</option>
+        <option value="Medium" data-price="5">Medium ($5.00)</option>
+        <option value="Large" data-price="6">Large ($6.00)</option>
+      </select>
+
+      <!-- Additional Instructions -->
+      <label for="instructions">Additional Instructions:</label>
+      <textarea id="instructions" name="instructions" rows="4" placeholder="E.g., No added sugar"></textarea>
+
+      <!-- Order Button -->
+      <button type="button" id="order-button">Order</button>
+    </form>
+
+    <!-- Smoothie Order Summary -->
+    <div id="order-summary">
+      <div id="smoothie-image"></div>
+      <div id="summary-details"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
